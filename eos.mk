@@ -8,6 +8,9 @@ $(call inherit-product, device/moto/shamu/aosp_shamu.mk)
 $(call inherit-product, vendor/eos/config/common.mk)
 $(call inherit-product, vendor/eos/config/common_full_phone.mk)
 
+# Custom overlay.
+DEVICE_PACKAGE_OVERLAYS += device/moto/shamu/overlay-cm
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := shamu
 PRODUCT_NAME := eos_shamu
