@@ -157,7 +157,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     fmas.spkr_angles=10 \
     fmas.spkr_sgain=0 \
     media.aac_51_output_enabled=true \
-    drm.service.enabled=true \
     persist.audio.dualmic.config=endfire \
     persist.audio.fluence.voicecall=true \
     persist.audio.fluence.voicerec=false \
