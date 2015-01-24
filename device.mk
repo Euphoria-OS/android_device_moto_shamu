@@ -30,6 +30,7 @@ PRODUCT_COPY_FILES += \
 # Kernel ramdisk files
 PRODUCT_COPY_FILES += \
     kernel/moto/shamu/lk.ramdisk/sbin/lkconfig:root/sbin/lkconfig \
+    kernel/moto/shamu/lk.ramdisk/sbin/lkconfig:root/sbin/lk \
     kernel/moto/shamu/lk.ramdisk/sbin/lk-post-boot.sh:root/sbin/lk-post-boot.sh
 
 # Input device files for shamu
