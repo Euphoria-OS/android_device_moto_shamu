@@ -19,4 +19,5 @@
     <string name="xda_url">http://forum.xda-developers.com/nexus-6/development/rom-euphoria-os-beta-0-3-t2954615</string>
     <string name="xda_summary">Visit the Nexus 6 XDA thread</string>
     <string name="changelog_url">http://fs1.androidfilesharing.com/ota/changelog_shamu_latest.txt</string>
+    <string name="xml_url_kitkat">http://euphoria-os.ninja/ota/ota_file.php</string>
 </resources>
