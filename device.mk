@@ -19,6 +19,7 @@
 #
 # Everything in this directory will become public
 
+
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/moto/shamu-kernel/zImage-dtb
 else
@@ -28,7 +29,6 @@ endif
 
 PRODUCT_COPY_FILES := \
     $(LOCAL_KERNEL):kernel
-
 
 PRODUCT_COPY_FILES += \
     device/moto/shamu/init.shamu.rc:root/init.shamu.rc \
@@ -49,6 +49,7 @@ PRODUCT_COPY_FILES += \
     kernel/moto/shamu/lk.ramdisk/sbin/supolicy:root/sbin/supolicy \
     kernel/moto/shamu/lk.ramdisk/sbin/lk-selinux-mode.sh:root/sbin/lk-selinux-mode.sh
 
+    device/moto/shamu/ueventd.shamu.rc:root/ueventd.shamu.rc
 
 # Input device files for shamu
 PRODUCT_COPY_FILES += \
@@ -77,6 +78,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
+    frameworks/native/data/etc/android.hardware.camera.full.xml:system/etc/permissions/android.hardware.camera.full.xml \
+    frameworks/native/data/etc/android.hardware.camera.raw.xml:system/etc/permissions/android.hardware.camera.raw.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
@@ -95,6 +98,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml
+    frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
+    frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml
 
 # For GPS
 PRODUCT_COPY_FILES += \
@@ -227,7 +232,7 @@ PRODUCT_PACKAGES += \
     qrngd
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196608
+    ro.opengles.version=196609
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=560
@@ -241,6 +246,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.no_wait_for_card=1
+
+#Reduce IMS logging
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.ims.disableDebugLogs=1
 
 #Disable QC Oem Hook
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -263,9 +272,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 net.tethering.noprovisioning=true
 
-# SIM based FSG loading default enabled
+# SIM based FSG loading & MCFG activation
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.fsg_reload_on=1 \
+    persist.radio.mcfg_enabled=1
 
 # Camera configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -330,7 +340,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Enable for volte call
-AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := false
+AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 
 PRODUCT_PROPERTY_OVERRIDES += \
    ro.hwui.texture_cache_size=72 \
@@ -378,3 +388,7 @@ PRODUCT_OEM_PROPERTIES := \
     ro.config.wallpaper_component \
     ro.oem.* \
     oem.*
+
+# Copy the qcril.db file from qcril to system. Useful to get the radio tech family for the camped operator
+PRODUCT_COPY_FILES += \
+    device/moto/shamu/qcril.db:system/etc/ril/qcril.db
