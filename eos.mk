@@ -15,6 +15,8 @@ PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6
 PRODUCT_MANUFACTURER := motorola
 
+BUILD_FINGERPRINT=google/shamu/shamu:5.1/LMY47M/1774234:user/release-keys \
+PRIVATE_BUILD_DESC="shamu-user 5.1 LMY47M 1774234 release-keys"
 # Enable Torch
 #PRODUCT_PACKAGES += Torch
 
