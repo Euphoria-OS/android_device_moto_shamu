@@ -35,7 +35,6 @@ PRODUCT_COPY_FILES += \
     kernel/moto/shamu/lk.ramdisk/sbin/lk-post-boot.sh:root/sbin/lk-post-boot.sh \
     kernel/moto/shamu/lk.ramdisk/init.lk.rc:root/init.lk.rc \
     kernel/moto/shamu/lk.ramdisk/sbin/supolicy:root/sbin/supolicy \
-    kernel/moto/shamu/lk.ramdisk/sbin/lk-selinux-mode.sh:root/sbin/lk-selinux-mode.sh \
     kernel/moto/shamu/lk.ramdisk/sbin/lk-early-boot.sh:root/sbin/lk-early-boot.sh 
 
 # Input device files for shamu
