@@ -50,5 +50,4 @@ on property:dev.bootcomplete=1
     write /sys/module/msm_thermal/parameters/temp_threshold 70
     write /sys/class/misc/mako_hotplug_control/load_threshold 0
     write /sys/class/misc/mako_hotplug_control/high_load_counter 5
-    write /sys/devices/system/cpu/sched_balance_policy/current_sched_balance_policy performance
     write /dev/cpuctl/apps/cpu.notify_on_migrate 0
