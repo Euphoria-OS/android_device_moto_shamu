@@ -3,6 +3,6 @@
    "remote":      "github",
    "repository":  "Euphoria-OS/kernel_motorola_shamu",
    "target_path": "kernel/moto/shamu",
-   "revision":    "lollipop"
+   "revision":    "lollipop-5.1"
  }
 ]
