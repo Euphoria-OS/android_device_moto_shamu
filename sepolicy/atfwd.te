@@ -16,3 +16,5 @@ binder_call(atfwd, servicemanager);
 
 #missing permission for atfwd daemon
 allow atfwd property_socket:sock_file write;
+
+unix_socket_connect(atfwd, property, init)
