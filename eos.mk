@@ -16,8 +16,8 @@ PRODUCT_MODEL := Nexus 6
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-BUILD_FINGERPRINT=google/shamu/shamu:5.1/LMY47I/1767468:user/release-keys \
-PRIVATE_BUILD_DESC="shamu-user 5.1 LMY47I 1767468 release-keys" 
+BUILD_FINGERPRINT=google/shamu/shamu:5.1.1/LYZ28E/1914015:user/release-keys \
+PRIVATE_BUILD_DESC="shamu-user 5.1.1 LYZ28E 1914015 release-keys" 
 
 # Enable Torch
 #PRODUCT_PACKAGES += Torch
