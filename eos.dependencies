@@ -3,6 +3,18 @@
    "remote":      "github",
    "repository":  "Euphoria-OS/kernel_motorola_shamu",
    "target_path": "kernel/moto/shamu",
+   "revision":    "lp-5.1-zen"
+ }
+ {
+   "remote":      "github",
+   "repository":  "MrTumbles/proprietary_vendor_motorola",
+   "target_path": "vendor/motorola",
    "revision":    "lollipop-5.1"
+ }
+ {
+   "remote":      "github",
+   "repository":  "Euphoria-OS-Legacy/android_libcore",
+   "target_path": "libcore",
+   "revision":    "lollipop-uber"
  }
 ]
