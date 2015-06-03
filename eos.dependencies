@@ -3,6 +3,12 @@
    "remote":      "github",
    "repository":  "Euphoria-OS/kernel_motorola_shamu",
    "target_path": "kernel/moto/shamu",
-   "revision":    "lollipop-5.1"
+   "revision":    "lp-5.1-zen"
+ }
+ {
+   "remote":      "Euphoria-OS-Legacy",
+   "repository":  "Euphoria-OS-Legacy/android_libcore",
+   "target_path": "libcore",
+   "revision":    "lollipop-uber"
  }
 ]
