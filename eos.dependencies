@@ -4,7 +4,7 @@
    "repository":  "Euphoria-OS/kernel_motorola_shamu",
    "target_path": "kernel/moto/shamu",
    "revision":    "lp-5.1-zen"
- }
+ },
  {
    "remote":      "Euphoria-OS-Legacy",
    "repository":  "Euphoria-OS-Legacy/android_libcore",
