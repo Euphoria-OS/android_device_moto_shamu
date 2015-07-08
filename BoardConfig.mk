@@ -23,7 +23,8 @@ TARGET_CPU_VARIANT := krait
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 TARGET_NO_BOOTLOADER := true
-
+TARGET_GCC_VERSION_ARM := 5.1
+TARGET_GCC_VERSION_EXP := 4.9
 # Inline kernel building		
 TARGET_KERNEL_CONFIG := hells_defconfig		
 TARGET_KERNEL_SOURCE := kernel/moto/shamu		
