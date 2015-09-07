@@ -1,0 +1,19 @@
+[
+ {
+   "remote":      "github",
+   "repository":  "hellsgod/hells-Core-N6",
+   "target_path": "kernel/moto/shamu",
+   "revision":    "m-preview-m3-unified"
+ },
+ {
+   "remote":      "Euphoria-OS-Legacy",
+   "repository":  "Euphoria-OS-Legacy/android_libcore",
+   "target_path": "libcore",
+   "revision":    "lollipop-uber"
+ },
+{ 
+   "remote":      "bb",
+   "repository":  "xanaxdroid/arm-eabi-5.2",
+   "target_path": "prebuilts/gcc/linux-x86/arm/arm-eabi-5.2",
+   "revision":    "sabermod"
+]
