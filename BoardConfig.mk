@@ -22,6 +22,8 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
 
 TARGET_NO_BOOTLOADER := true
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-5.2
+TARGET_GCC_VERSION_EXP := 5.2
 
 # Inline kernel building
 TARGET_KERNEL_CONFIG := shamu_defconfig
