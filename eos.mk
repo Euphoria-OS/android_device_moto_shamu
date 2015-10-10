@@ -24,3 +24,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/eos/prebuilt/common/bootanimations/BOOTANIMATION-1080x1920.zip:system/media/bootanimation.zip
 
+# libxml2
+PRODUCT_PACKAGES += \
+    libxml2
+
