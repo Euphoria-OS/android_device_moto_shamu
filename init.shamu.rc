@@ -170,6 +170,7 @@ on boot
     setprop ro.telephony.call_ring.multiple false
 
     chown system system /sys/bus/i2c/devices/1-004a/tsp
+    write /sys/bus/i2c/devices/1-004a/tsp AUTO
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
