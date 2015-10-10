@@ -1,0 +1,8 @@
+[
+ {
+   "remote":      "github",
+   "repository":  "Euphoria-OS/android_kernel_msm",
+   "target_path": "kernel/moto/shamu",
+   "revision":    "marshmallow-6.0-shamu"
+ }
+]
