@@ -380,6 +380,7 @@ bin/qmuxd
 bin/radish
 bin/tcmd_mini
 lib/libdetectmodem.so
+lib/libimsmedia_jni.so
 lib/libmdmdetect.so
 lib/librmnetctl.so
 lib/libsysutils_local.so
